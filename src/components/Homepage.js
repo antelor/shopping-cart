@@ -1,22 +1,22 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import Homepage from "./components/Homepage";
 
-export class App extends Component {
+export class Homepage extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      cart: [],
-      totalPrice: 0,
+
     };
   }
 
   render() {
     return (
-      <Homepage />
+      <div className="Homepage">
+        <button><Link to="/shop">Shop now</Link></button>
+      </div>
     );
   }
 }
 
-export default App;
+export default Homepage;
