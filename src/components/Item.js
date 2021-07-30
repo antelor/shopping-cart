@@ -1,21 +1,34 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
+import { useHistory } from 'react-router-dom';
+import "../styles/Item.css";
 
-export class Item extends Component {
-  constructor(props) {
-    super(props);
+export function Item( { name, price, img } ) {
+  const history = useHistory();
 
-    this.state = {
-        
+  function goItemPage () {    
+    history.push({
+      pathname: '/item',
+      state: {
+        name,
+        price,
+        img,
+      }
+    });
+  }
+
+  useEffect(() => {
+    window.addEventListener("click", goItemPage);
+
+    return () => {
+      window.removeEventListener("click", goItemPage);
     };
-  }
+  });
 
-  render() {
-    return(
-        <div className="Item">
-            aaaaa
-        </div>
-    );
-  }
+  return(
+    <div className="item">
+      {name} {price} {img}
+    </div>
+  )
 }
 
 export default Item;

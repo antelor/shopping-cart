@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Homepage from "./components/Homepage";
+import Shop from "./components/Shop";
+import Checkout from "./components/Checkout";
 
 export class App extends Component {
   constructor(props) {
@@ -13,7 +15,11 @@ export class App extends Component {
 
   render() {
     return (
-      <Homepage />
+      <div>
+        <Homepage {...this.state} />
+        <Shop {...this.state}/>
+        <Checkout {...this.state} />        
+      </div>
     );
   }
 }

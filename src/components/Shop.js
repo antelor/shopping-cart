@@ -6,23 +6,18 @@ import Item from "./Item";
 export class Shop extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-        
-    };
   }
 
   render() {
     return(
         <div className="Shop">
             {allProducts
-                //mapeo para display
-                .map((item, index, arr) =>
-                <Item />
-            )}
+            //mapeo para display
+            .map((item, index, arr) =>
+              <Item name={item.name} price={item.price} img={item.img}/>                
+            )}  
 
             <button><Link to="/checkout">Checkout</Link></button>
-
         </div>
     );
   }

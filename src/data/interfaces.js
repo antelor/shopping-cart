@@ -1,11 +1,13 @@
 const interfaces = [
     {
-        name: "a",
+        name: "Focusrite Scarlett 2i2",
         price: 12,
+        img: 'a',
     },
     {
-        name: "b",
+        name: "Asio4All",
         price: 15,
+        img: 'b',
     }
 ]
 
