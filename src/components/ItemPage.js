@@ -1,17 +1,20 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-export class ItemPage extends Component {
-  constructor(props) {
-    super(props);
-  }
+const ItemPage = props => {
+    const location = useLocation();
 
-  render() {
+    useEffect(() => {
+        console.log(location.pathname);
+        console.log(location.state.name);
+     }, [location]);
+
     return(
         <div className="ItemPage">
-            aaa
+            {location.state.name}a
         </div>
     );
-  }
+    
 }
 
 export default ItemPage;

@@ -14,7 +14,7 @@ export class Shop extends Component {
             {allProducts
             //mapeo para display
             .map((item, index, arr) =>
-              <Item name={item.name} price={item.price} img={item.img}/>                
+              <Item name={item.name} price={item.price} img={item.img} id={index}/>
             )}  
 
             <button><Link to="/checkout">Checkout</Link></button>
