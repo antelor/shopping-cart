@@ -1,4 +1,5 @@
 import React, { Component, useEffect } from "react";
+import { useHistory } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 
 const ItemPage = ({ addToCart }) => {
@@ -18,6 +19,8 @@ const ItemPage = ({ addToCart }) => {
                 img: location.state.img,
                 id: location.state.id,
             }, location.state.price)}>add to cart</button>
+
+            <button onClick={ useHistory().goBack }>volver</button>
         </div>
     );
     
