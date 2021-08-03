@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 import "../styles/Item.css";
 
@@ -6,8 +6,6 @@ export function Item( { name, price, img, id } ) {
   const history = useHistory();
 
   function goItemPage() {
-    document.getElementById(id);
-
     history.push({
       pathname: `/item/${id}`,
       state: {

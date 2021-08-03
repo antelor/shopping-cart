@@ -1,17 +1,23 @@
 import React, { Component, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const ItemPage = props => {
+const ItemPage = ({ addToCart }) => {
     const location = useLocation();
 
-    useEffect(() => {
+    /*useEffect(() => {
         console.log(location.pathname);
         console.log(location.state.name);
-     }, [location]);
+     }, [location]);*/
 
     return(
         <div className="ItemPage">
-            {location.state.name}a
+            {location.state.name}
+            <button onClick={(e) => addToCart(e, {
+                name: location.state.name,
+                price: location.state.price,
+                img: location.state.img,
+                id: location.state.id,
+            }, location.state.price)}>add to cart</button>
         </div>
     );
     
