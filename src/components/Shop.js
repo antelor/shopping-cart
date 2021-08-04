@@ -13,12 +13,12 @@ export class Shop extends Component {
     return(
       <div className="mainShop">
 
-            <nav>
-              <ul>
-                <li><Link to="/" class="link">LocalDeMusica</Link></li>
-                <li><Link to="/checkout" class="link">Checkout</Link></li>
-              </ul>
-            </nav>
+        <nav>
+          <ul>
+            <li><Link to="/" class="link">LocalDeMusica</Link></li>
+            <li><Link to="/checkout" class="link">Checkout</Link></li>
+          </ul>
+        </nav>
 
         <div class="shopDiv">
             {Object.entries(allProducts)
