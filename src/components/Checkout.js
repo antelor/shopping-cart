@@ -1,21 +1,21 @@
 import React, { Component } from "react";
+import { useHistory } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
-export class Checkout extends Component {
-  constructor(props) {
-    super(props);
+const Checkout = props => {
+  const location = useLocation();
 
-    this.state = {
-        
-    };
-  }
-
-  render() {
     return(
-        <div className="checkout">
-            b
-        </div>
+      <div className="checkout">
+        {props.parentState.cart
+            //mapeo para display
+            .map((item, index, arr) =>
+              <div>{item.name}</div>
+        )}
+        <button onClick={ useHistory().goBack }>volver</button>
+
+      </div>
     );
-  }
 }
 
 export default Checkout;

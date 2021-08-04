@@ -21,6 +21,7 @@ const ItemPage = ({ addToCart }) => {
             }, location.state.price)}>add to cart</button>
 
             <button onClick={ useHistory().goBack }>volver</button>
+
         </div>
     );
     

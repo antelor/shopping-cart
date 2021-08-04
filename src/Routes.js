@@ -21,6 +21,11 @@ export class Routes extends React.Component {
   addToCart = (e, item, price = 0) => {
     let copyState = this.state;
 
+    //remove undefined
+    copyState.cart = copyState.cart.filter(function (i) {
+      return i != null;
+    });
+
     copyState.cart.push(item);
     copyState.totalPrice = copyState.totalPrice + price;
 
@@ -34,7 +39,7 @@ export class Routes extends React.Component {
           <Route exact path="/" render={() => <Homepage parentState={this.state} />} />
           <Route exact path="/shop" render={() => <Shop parentState={this.state} />} />
           <Route exact path="/checkout" render={() => <Checkout parentState={this.state} />} />
-          <Route exact path="/item/:categoryId" render={() => <ItemPage addToCart={this.addToCart}/>} />
+          <Route exact path="/item/:categoryId" render={() => <ItemPage parentState={this.state} addToCart={this.addToCart}/>} />
         </Switch>
       </BrowserRouter>
     );

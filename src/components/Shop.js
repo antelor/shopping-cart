@@ -17,7 +17,8 @@ export class Shop extends Component {
               <Item name={item.name} price={item.price} img={item.img} id={index}/>
             )}  
 
-            <button><Link to="/checkout">Checkout</Link></button>
+          <button><Link to="/checkout">Checkout</Link></button>         
+
         </div>
     );
   }
