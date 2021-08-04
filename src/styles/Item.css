@@ -1,12 +1,12 @@
 .item{
     background-color: lightgray;
     margin:1em;
-    width:100px;
-    padding:2em;
+    width:200px;
+    height:200px;
 }
 
 .itemImg{
-    width:80px;
+    width:100px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -14,8 +14,10 @@
 
 .itemName{
     text-align: center;
+    padding: 0.7em;
 }
 
 .itemPrice{
     text-align: center;
+    margin-top:1em;
 }
