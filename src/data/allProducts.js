@@ -1,14 +1,14 @@
 import interfaces from "./interfaces";
-/*import guitars from "./guitars";
+import guitars from "./guitars";
 import bass from "./bass";
-import keyboard from "./keyboard";
+/*import keyboard from "./keyboard";
 import monitors from "./monitors";*/
 
 const allProducts = [
   ...interfaces,
-  /*...guitars,
+  ...guitars,
   ...bass,
-  ...keyboard,
+  /*...keyboard,
   ...monitors,*/
 ];
 

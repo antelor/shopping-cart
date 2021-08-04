@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
+import "../styles/Homepage.css";
 
 export class Homepage extends Component {
   constructor(props) {
@@ -13,7 +14,11 @@ export class Homepage extends Component {
   render() {
     return (
       <div className="Homepage">
-        <button><Link to="/shop">Shop now</Link></button>
+        <nav>LocalDeMusica</nav>
+
+        <div className="homepageDiv">
+          <button className="btn shopBtn"><Link to="/shop" class="shopLink">Visita nuestra tienda</Link></button>
+        </div>
       </div>
     );
   }

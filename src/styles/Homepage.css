@@ -1,0 +1,64 @@
+:root{
+    box-sizing: border-box;
+    font-family:'Roboto',sans-serif;
+    background-image: url('../images/homepage-wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+*,
+::before
+::after{
+    box-sizing: inherit;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:2em;
+    background-color:lightgray;
+}
+
+.homepageDiv{
+    display:flex;
+    position:relative;
+    top:300px;
+    text-align: center;
+    margin:auto;
+    height:100%;
+    width:100%;
+}
+
+.shopBtn{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+    position:absolute;
+    left:500px;
+}
+
+.shopLink{
+    text-decoration: none;
+    color:black;
+}
+
+.shopBtn:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+}
+
+@media all and (max-width:30em){
+    .shopBtn{
+        display:block;
+        margin:0.4em auto;
+    }
+} 
