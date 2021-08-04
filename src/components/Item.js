@@ -27,7 +27,13 @@ export function Item( { name, price, img, id } ) {
 
   return(
     <div className="item" id={id}>
-      {name} {price} {img} id:{id}
+      <div class="itemName">
+        {name}
+      </div>
+      <img class="itemImg" src={img} />
+      <div class="itemPrice">
+        ${price}
+      </div>
     </div>
   )
 }

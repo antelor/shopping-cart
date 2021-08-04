@@ -1,14 +1,11 @@
+import scarlett2i2 from './images/interfaces/scarlett2i2.jpeg';
+
 const interfaces = [
     {
         name: "Focusrite Scarlett 2i2",
         price: 12,
-        img: 'a',
+        img: scarlett2i2,
     },
-    {
-        name: "Asio4All",
-        price: 15,
-        img: 'b',
-    }
 ]
 
 export default interfaces;

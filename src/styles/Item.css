@@ -1,5 +1,20 @@
 .item{
-    background-color: gray;
+    background-color: lightgray;
     margin:1em;
     width:100px;
+}
+
+.itemImg{
+    width:80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.itemName{
+    text-align: center;
+}
+
+.itemPrice{
+    text-align: center;
 }
