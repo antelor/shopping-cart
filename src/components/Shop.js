@@ -15,7 +15,7 @@ export class Shop extends Component {
 
             <nav>
               <ul>
-                <li>LocalDeMusica</li>
+                <li><Link to="/" class="link">LocalDeMusica</Link></li>
                 <li><Link to="/checkout" class="link">Checkout</Link></li>
               </ul>
             </nav>
