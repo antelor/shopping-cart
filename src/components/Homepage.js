@@ -14,7 +14,12 @@ export class Homepage extends Component {
   render() {
     return (
       <div className="Homepage">
-        <nav>LocalDeMusica</nav>
+        <nav>
+          <ul>
+            <li>LocalDeMusica</li>
+            <li><Link to="/checkout" class="link">Checkout</Link></li>
+          </ul>
+        </nav>
 
         <div className="homepageDiv">
           <button className="btn shopBtn"><Link to="/shop" class="shopLink">Visita nuestra tienda</Link></button>
