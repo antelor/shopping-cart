@@ -26,10 +26,11 @@ export class Shop extends Component {
               .map((categ, i) =>
               //category name
               <div class="categDiv"><div class="categTitle">{categ[0]}</div>
-                  
-              {categ[1].map((item, index, arr) =>
-                <Item key={index} name={item.name} price={item.price} img={item.img} id={item.id} />
-              )}
+                <div class="categItems">
+                {categ[1].map((item, index, arr) =>
+                  <Item key={index} name={item.name} price={item.price} img={item.img} id={item.id} />
+                      )}
+                </div>
               </div>
           )}
           </div>

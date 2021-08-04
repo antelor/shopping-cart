@@ -12,9 +12,14 @@
 }
 
 .categDiv{
+    display:block;
+}
+
+.categItems{
     display:flex;
 }
 
 .categTitle{
     color:white;
+    padding: 1em;
 }

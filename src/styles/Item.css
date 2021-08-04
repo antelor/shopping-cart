@@ -5,6 +5,10 @@
     height:200px;
 }
 
+.item:hover {
+    background-color: #808080;
+}
+
 .itemImg{
     width:100px;
     display: block;
