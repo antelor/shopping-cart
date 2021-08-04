@@ -6,11 +6,13 @@ const bass = [
         name: "Fender American 75 Jazz Bass",
         price: 400,
         img: jazzbass,
+        id:5,
     },
     {
         name: "Jaco Fretless",
         price: 5000,
-        img:jaco,
+        img: jaco,
+        id:6,
     }
 ]
 

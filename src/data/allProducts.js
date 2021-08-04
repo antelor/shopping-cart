@@ -5,8 +5,8 @@ import bass from "./bass";
 import monitors from "./monitors";*/
 
 const allProducts = {
-  'Interfaces': interfaces,
   'Guitarras': guitars,
+  'Interfaces': interfaces,
   'Bajos': bass,
   /*...keyboard,
   ...monitors,*/
