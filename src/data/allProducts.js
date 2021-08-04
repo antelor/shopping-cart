@@ -4,12 +4,12 @@ import bass from "./bass";
 /*import keyboard from "./keyboard";
 import monitors from "./monitors";*/
 
-const allProducts = [
-  ...interfaces,
-  ...guitars,
-  ...bass,
+const allProducts = {
+  'Interfaces': interfaces,
+  'Guitarras': guitars,
+  'Bajos': bass,
   /*...keyboard,
   ...monitors,*/
-];
+};
 
 export default allProducts;

@@ -11,21 +11,28 @@ export class Shop extends Component {
 
   render() {
     return(
-      <div className="Shop">
-          <nav>
-            <ul>
-              <li>LocalDeMusica</li>
-              <li><button><Link to="/checkout">Checkout</Link></button></li>
-            </ul>
-          </nav>
-          
-                 
+      <div className="mainShop">
 
-            {allProducts
-            //mapeo para display
-            .map((item, index, arr) =>
-              <Item name={item.name} price={item.price} img={item.img} id={index}/>
-            )}  
+            <nav>
+              <ul>
+                <li>LocalDeMusica</li>
+                <li><Link to="/checkout" class="link">Checkout</Link></li>
+              </ul>
+            </nav>
+
+        <div class="shopDiv">
+            {Object.entries(allProducts)
+              //mapeo para display
+              .map((categ, i) =>
+              //category name
+              <div class="categDiv"><div class="categTitle">{categ[0]}</div>
+                  
+              {categ[1].map((item, index, arr) =>
+                <Item key={index} name={item.name} price={item.price} img={item.img} id={index} />
+              )}
+              </div>
+          )}
+          </div>
 
 
         </div>
