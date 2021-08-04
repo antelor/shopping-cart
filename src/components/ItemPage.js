@@ -1,6 +1,7 @@
 import React, { Component, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const ItemPage = ({ addToCart }) => {
     const location = useLocation();
@@ -20,7 +21,7 @@ const ItemPage = ({ addToCart }) => {
                 id: location.state.id,
             }, location.state.price)}>add to cart</button>
 
-            <button onClick={ useHistory().goBack }>volver</button>
+            <Link to="/shop">volver</Link>
 
         </div>
     );
