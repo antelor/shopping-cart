@@ -63,10 +63,6 @@ li {
     left:500px;
 }
 
-.shopLink{
-    text-decoration: none;
-    color:black;
-}
 
 .shopBtn:hover{
     color:#000000;
@@ -74,8 +70,40 @@ li {
 }
 
 @media all and (max-width:30em){
-    .shopBtn{
+    .shopBtn{
         display:block;
         margin:0.4em auto;
     }
 } 
+
+
+.backBtn{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    font-weight:300;
+    color:black;
+    text-align:center;
+    transition: all 0.2s;
+    float: right;
+}
+
+.backBtn:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+}
+
+@media all and (max-width:30em){
+    .backBtn{
+        display:block;
+        margin:0.4em auto;
+    }
+} 
+
+.shopLink{
+    text-decoration: none;
+    color:black;
+}

@@ -9,7 +9,17 @@ const Checkout = props => {
 
   let checkoutList = (props.parentState.cart[0]==undefined
     ? <div>Carrito vacio!</div>
-    : props.parentState.cart.map((item, index, arr) => <div>{item.name}</div>));
+    : props.parentState.cart.map((item, index, arr) =>
+      <div className="checkoutItem">
+        <img className="checkoutImg" src={ item.img } />
+
+        <span className="checkoutName">
+          {item.name}
+        </span>
+        <span className="checkoutPrice">
+          ${item.price}
+        </span>
+      </div>));
   
   return (
       <div className="checkout">
@@ -22,7 +32,7 @@ const Checkout = props => {
         
         <div class="checkoutDiv">
           {checkoutList}
-          <button onClick={ useHistory().goBack }>volver</button>
+          <button className="btn backBtn" onClick={ useHistory().goBack }>Volver</button>
         </div>
 
       </div>

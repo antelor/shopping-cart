@@ -27,7 +27,7 @@ const ItemPage = ({ parentState, addToCart }) => {
                         id: location.state.id,
                     }, location.state.price)}>Agregar al carrito</button><br/>
                     <button>
-                        <Link to="/shop" class="link">Volver</Link>
+                        <Link to="/shop" className="btn backBtn" class="link">Volver</Link>
                     </button>
                 </div>
 

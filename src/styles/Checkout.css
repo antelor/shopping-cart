@@ -2,6 +2,31 @@
     background-color: rgba(0, 0, 0, 0.5);
     position: relative;
     top:100px;
-    width:100%;
-    left:auto;
+    width:50%;
+    margin:auto;
+}
+
+.checkoutItem{
+    background-color: white;
+    padding:1em;
+    margin:1em;
+    border: 10px solid lightgray;
+    width:70%;
+    margin:auto;
+    display: flex;
+    align-items:center;
+}
+
+.checkoutImg{
+    height:50px;
+    width:50px;
+}
+
+.checkoutName{
+    font-weight: 700;
+    margin: 0em auto;
+}
+
+.checkoutPrice{
+    float:right;
 }
