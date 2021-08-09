@@ -35,13 +35,29 @@ export class Routes extends React.Component {
     this.setState(copyState);
   };
 
+  deleteItem = (e, item) => {
+    let copyState = this.state;
+    let index = -1;
+    for (let i = 0; i < copyState.cart.length; i++){
+      if (copyState.cart[i] === item) index = i;
+    }
+
+    if (index != -1) {
+      copyState.cart.splice(index, 1);
+      copyState.sizeOfCart--;
+      copyState.totalPrice = copyState.totalPrice - item.price;
+      this.setState(copyState);    
+    }
+
+  }
+
   render() {
     return (
       <BrowserRouter>
         <Switch>
           <Route exact path="/" render={() => <Homepage parentState={this.state} />} />
           <Route exact path="/shop" render={() => <Shop parentState={this.state} />} />
-          <Route exact path="/checkout" render={() => <Checkout parentState={this.state} />} />
+          <Route exact path="/checkout" render={() => <Checkout parentState={this.state} deleteItem={this.deleteItem} />} />
           <Route exact path="/item/:categoryId" render={() => <ItemPage parentState={this.state} addToCart={this.addToCart}/>} />
         </Switch>
       </BrowserRouter>
