@@ -34,8 +34,16 @@ const Checkout = ({ parentState, deleteItem }) => {
         </nav>
         
         <div className="checkoutDiv">
-          {checkoutList}
-          <button className="btn backBtn" onClick={ useHistory().goBack }>Volver</button>
+        {checkoutList}
+        
+        <div>
+          <span className="checkoutItem">
+            Precio total: ${parentState.totalPrice}
+          </span>
+
+        <button className="btn backBtn" onClick={ useHistory().goBack }>Volver</button>
+        </div>
+
         </div>
 
       </div>
