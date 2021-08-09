@@ -8,7 +8,7 @@ const Checkout = props => {
   const location = useLocation();
 
   let checkoutList = (props.parentState.cart[0]==undefined
-    ? <div>Carrito vacio!</div>
+    ? <div className="checkoutItem">Carrito vacio!</div>
     : props.parentState.cart.map((item, index, arr) =>
       <div className="checkoutItem">
         <img className="checkoutImg" src={ item.img } />
