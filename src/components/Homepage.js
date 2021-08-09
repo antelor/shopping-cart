@@ -16,13 +16,13 @@ export class Homepage extends Component {
       <div className="Homepage">
         <nav>
           <ul>
-            <li><Link to="/" class="link">LocalDeMusica</Link></li>
-            <li><Link to="/checkout" class="link">Checkout</Link></li>
+            <li><Link to="/" className="link">LocalDeMusica</Link></li>
+            <li><Link to="/checkout" className="link">Checkout</Link></li>
           </ul>
         </nav>
 
         <div className="homepageDiv">
-          <button className="btn shopBtn"><Link to="/shop" class="shopLink">Visita nuestra tienda</Link></button>
+          <button className="btn shopBtn"><Link to="/shop" className="shopLink">Visita nuestra tienda</Link></button>
         </div>
       </div>
     );

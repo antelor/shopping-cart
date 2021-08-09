@@ -1,13 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { useLocation } from "react-router-dom";
 import "../styles/Checkout.css";
 
 const Checkout = props => {
-  const location = useLocation();
-
-  let checkoutList = (props.parentState.cart[0]==undefined
+  let checkoutList = (props.parentState.cart[0]===undefined
     ? <div className="checkoutItem">Carrito vacio!</div>
     : props.parentState.cart.map((item, index, arr) =>
       <div className="checkoutItem">
@@ -19,18 +16,20 @@ const Checkout = props => {
         <span className="checkoutPrice">
           ${item.price}
         </span>
+
+        <button>X</button>
       </div>));
   
   return (
       <div className="checkout">
         <nav>
           <ul>
-            <li><Link to="/" class="link">LocalDeMusica</Link></li>
-            <li><Link to="/checkout" class="link">({props.parentState.sizeOfCart}) Checkout</Link></li>
+            <li><Link to="/" className="link">LocalDeMusica</Link></li>
+            <li><Link to="/checkout" className="link">({props.parentState.sizeOfCart}) Checkout</Link></li>
           </ul>
         </nav>
         
-        <div class="checkoutDiv">
+        <div className="checkoutDiv">
           {checkoutList}
           <button className="btn backBtn" onClick={ useHistory().goBack }>Volver</button>
         </div>

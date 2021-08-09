@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import "../styles/ItemPage.css";
@@ -10,13 +10,13 @@ const ItemPage = ({ parentState, addToCart }) => {
         <div className="itemPageDiv">
             <nav>
                 <ul>
-                    <li><Link to="/" class="link">LocalDeMusica</Link></li>
-                    <li><Link to="/checkout" class="link">({parentState.sizeOfCart}) Checkout</Link></li>
+                    <li><Link to="/" className="link">LocalDeMusica</Link></li>
+                    <li><Link to="/checkout" className="link">({parentState.sizeOfCart}) Checkout</Link></li>
                 </ul>
             </nav>
 
             <div className="itemDiv">
-                <img class="infoImg" src={location.state.img} />
+                <img className="infoImg" src={location.state.img} />
                 <div className="info">
                     Nombre: {location.state.name} <br/>
                     Precio: ${location.state.price}<br/>
@@ -27,7 +27,7 @@ const ItemPage = ({ parentState, addToCart }) => {
                         id: location.state.id,
                     }, location.state.price)}>Agregar al carrito</button><br/>
                     <button>
-                        <Link to="/shop" className="btn backBtn" class="link">Volver</Link>
+                        <Link to="/shop" className="btn backBtn" className="link">Volver</Link>
                     </button>
                 </div>
 

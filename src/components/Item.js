@@ -27,11 +27,11 @@ export function Item( { name, price, img, id } ) {
 
   return(
     <div className="item" id={id}>
-      <div class="itemName">
+      <div className="itemName">
         {name}
       </div>
-      <img class="itemImg" src={img} />
-      <div class="itemPrice">
+      <img className="itemImg" src={img} />
+      <div className="itemPrice">
         ${price}
       </div>
     </div>
