@@ -1,10 +1,9 @@
 import React, { Component, useEffect } from "react";
-import { useHistory } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import "../styles/ItemPage.css";
 
-const ItemPage = ({ addToCart }) => {
+const ItemPage = ({ parentState, addToCart }) => {
     const location = useLocation();
 
     return(
@@ -12,7 +11,7 @@ const ItemPage = ({ addToCart }) => {
             <nav>
                 <ul>
                     <li><Link to="/" class="link">LocalDeMusica</Link></li>
-                    <li><Link to="/checkout" class="link">Checkout</Link></li>
+                    <li><Link to="/checkout" class="link">({parentState.sizeOfCart}) Checkout</Link></li>
                 </ul>
             </nav>
 

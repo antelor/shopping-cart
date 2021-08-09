@@ -11,6 +11,7 @@ export class Routes extends React.Component {
 
     this.state = {
       cart: [],
+      sizeOfCart: -1,
       totalPrice: 0,
     };
 
@@ -28,6 +29,8 @@ export class Routes extends React.Component {
 
     copyState.cart.push(item);
     copyState.totalPrice = copyState.totalPrice + price;
+
+    copyState.sizeOfCart++;
 
     this.setState(copyState);
   };

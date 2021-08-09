@@ -16,7 +16,7 @@ export class Shop extends Component {
         <nav>
           <ul>
             <li><Link to="/" class="link">LocalDeMusica</Link></li>
-            <li><Link to="/checkout" class="link">Checkout</Link></li>
+            <li><Link to="/checkout" class="link">({this.props.parentState.sizeOfCart}) Checkout</Link></li>
           </ul>
         </nav>
 
