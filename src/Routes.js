@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import Shop from "./components/Shop";
 import Checkout from "./components/Checkout";
@@ -53,14 +53,14 @@ export class Routes extends React.Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           <Route exact path="/" render={() => <Homepage parentState={this.state} />} />
           <Route exact path="/shop" render={() => <Shop parentState={this.state} />} />
           <Route exact path="/checkout" render={() => <Checkout parentState={this.state} deleteItem={this.deleteItem} />} />
           <Route exact path="/item/:categoryId" render={() => <ItemPage parentState={this.state} addToCart={this.addToCart}/>} />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 };
