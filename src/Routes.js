@@ -53,7 +53,7 @@ export class Routes extends React.Component {
 
   render() {
     return (
-      <HashRouter>
+      <HashRouter basename="/">
         <Switch>
           <Route exact path="/" render={() => <Homepage parentState={this.state} />} />
           <Route exact path="/shop" render={() => <Shop parentState={this.state} />} />
